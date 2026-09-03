@@ -1,0 +1,11 @@
+name: ForeverSMPlugin
+version: '${version}'
+
+main: nl.bartjuuh.ForeverSMPlugin.Main
+paper-plugin-loader: nl.bartjuuh.ForeverSMPlugin.MainLoader
+api-version: '26.2'
+load: POSTWORLD
+commands:
+  profile:
+    description: Save or load your profile
+    usage: /profile <save|load>
