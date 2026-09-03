@@ -40,12 +40,16 @@ public class CommandExecutor implements org.bukkit.command.CommandExecutor {
         }
 
         if (args[0].equalsIgnoreCase("save")) {
-            player.sendMessage(Component.text("save", NamedTextColor.GREEN));
+            if(ProfileManager.SaveProfile(player)){
+                player.sendMessage(Component.text("Your player data has been saved!", NamedTextColor.GREEN));
+            }
             return true;
         }
 
         if (args[0].equalsIgnoreCase("load")) {
-            player.sendMessage(Component.text("load", NamedTextColor.GREEN));
+            if(ProfileManager.LoadProfile(player)){
+                player.sendMessage(Component.text("Your player data has been loaded!", NamedTextColor.GREEN));
+            }
             return true;
         }
 
